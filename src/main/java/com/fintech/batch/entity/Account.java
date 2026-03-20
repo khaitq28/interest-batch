@@ -1,9 +1,12 @@
 package com.fintech.batch.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
 @Table(name = "account")
 public class Account {
@@ -31,22 +34,4 @@ public class Account {
     private LocalDateTime createdAt;
 
     public Account() {}
-
-    public Long getId() { return id; }
-    public String getAccountNumber() { return accountNumber; }
-    public String getOwnerName() { return ownerName; }
-    public BigDecimal getBalance() { return balance; }
-    public double getAnnualInterestRate() { return annualInterestRate; }
-    public BigDecimal getAccruedInterest() { return accruedInterest; }
-    public LocalDateTime getLastInterestCalculatedAt() { return lastInterestCalculatedAt; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
-
-    public void setId(Long id) { this.id = id; }
-    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
-    public void setOwnerName(String ownerName) { this.ownerName = ownerName; }
-    public void setBalance(BigDecimal balance) { this.balance = balance; }
-    public void setAnnualInterestRate(double annualInterestRate) { this.annualInterestRate = annualInterestRate; }
-    public void setAccruedInterest(BigDecimal accruedInterest) { this.accruedInterest = accruedInterest; }
-    public void setLastInterestCalculatedAt(LocalDateTime lastInterestCalculatedAt) { this.lastInterestCalculatedAt = lastInterestCalculatedAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
